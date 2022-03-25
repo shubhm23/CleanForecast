@@ -24,16 +24,16 @@ import java.util.*
 
 
 class Home : AppCompatActivity() {
-    var iconUrl : String? = "https://openweathermap.org/img/wn/02n@2x.png"
+    var iconUrl : String? = "https://openweathermap.org/img/wn/50d@2x.png"
     var CITY: String? = null
-    val API: String = "06c921750b9a82d8f5d1294e1586276f"
+    val API: String = BuildConfig.apiKey
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         CITY = intent.getStringExtra("Data").toString()
        weatherTask().execute()
-//       Glide.with(this).load(iconUrl).into(findViewById<ImageView>(R.id.iconImg))
+       Glide.with(this).load(iconUrl).into(findViewById<ImageView>(R.id.iconImg))
         Log.d(TAG, "This is the current value of URL = $iconUrl")
 //        GlobalScope.launch ( Dispatchers.IO ) {
 //            val answer1 = launch { weatherTask().execute() }
@@ -42,11 +42,12 @@ class Home : AppCompatActivity() {
 //            answer1.join()
 //            answer2.join()
 //        }
-        val handler = Handler(Looper.getMainLooper())
-        handler.postDelayed({
-            // do something after 1000ms
-            Glide.with(this).load(iconUrl).into(findViewById<ImageView>(R.id.iconImg))
-        }, 8000L)
+
+//        val handler = Handler(Looper.getMainLooper())
+//        handler.postDelayed({
+//            // do something after 1000ms
+//            Glide.with(this).load(iconUrl).into(findViewById<ImageView>(R.id.iconImg))
+//        }, 8000L)
 
 //        Glide.with(this).load(weatherTask().iconUrl).into(findViewById<ImageView>(R.id.iconImg))
     }

@@ -42,8 +42,8 @@
 
             <ImageView
                 android:id="@+id/iconImg"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 tools:srcCompat="@tools:sample/avatars"/>
 
         </LinearLayout>
@@ -313,26 +313,11 @@
 
                     <ImageView
                         android:layout_width="25dp"
-                        android:layout_height="25dp"
+                        android:layout_height="67dp"
                         android:src="@drawable/info"
                         android:tint="#FFFFFF" />
 
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="5dp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Created By"
-                        android:textSize="12dp" />
-
-                    <TextView
-                        android:id="@+id/about"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Shubham"
-                        android:textSize="14dp" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
